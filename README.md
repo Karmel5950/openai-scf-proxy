@@ -75,7 +75,10 @@ const configuration = new Configuration({
   basePath: 'https://service-aaaaa.hk.apigw.tencentcs.com/v1'
 })
 ```
-
+### OpenAI 官方 Python 库
+```
+openai.api_base = "https://service-aaaaa.hk.apigw.tencentcs.com/v1"
+```
 ## 自托管
 
 ```
@@ -83,4 +86,9 @@ git clone https://github.com/Ice-Hazymoon/openai-scf-proxy
 cd openai-scf-proxy
 npm install
 npm run start
+```
+默认端口为9000，使用前请检查端口是否打开
+python库可以这样使用
+```
+openai.api_base = "http://127.0.0.1:9000/v1" #127.0.0.1为代理服务器的ip
 ```
